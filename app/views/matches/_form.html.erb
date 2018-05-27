@@ -1,0 +1,47 @@
+<%= form_with(model: match, local: true) do |form| %>
+  <% if match.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(match.errors.count, "error") %> prohibited this match from being saved:</h2>
+
+      <ul>
+      <% match.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= form.label :location %>
+    <%= form.text_field :location, id: :match_location %>
+  </div>
+
+  <div class="field">
+    <%= form.label :date %>
+    <%= form.date_select :date, id: :match_date %>
+  </div>
+
+  <div class="field">
+    <%= form.label :home_score %>
+    <%= form.number_field :home_score, id: :match_home_score %>
+  </div>
+
+  <div class="field">
+    <%= form.label :away_score %>
+    <%= form.number_field :away_score, id: :match_away_score %>
+  </div>
+
+  <div class="field">
+    <%= form.label :home %>
+    <%= form.text_field :home, id: :match_home %>
+  </div>
+
+  <div class="field">
+    <%= form.label :away %>
+    <%= form.text_field :away, id: :match_away %>
+  </div>
+
+  <div class="actions">
+    <%= form.submit %>
+  </div>
+<% end %>

@@ -1,0 +1,17 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  location: MyString
+  date: 2018-05-26
+  home_score: 1
+  away_score: 1
+  home: MyString
+  away: MyString
+
+two:
+  location: MyString
+  date: 2018-05-26
+  home_score: 1
+  away_score: 1
+  home: MyString
+  away: MyString
