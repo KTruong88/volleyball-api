@@ -1,16 +1,9 @@
 class Team < ApplicationRecord
   has_many :matches,
-    primary_key: :id,
-    foreign_key: :team_id,
-    class_name: :Match
+    primary_key: :id
 
   has_many :users,
-    primary_key: :id,
-    foreign_key: :user_id,
-    class_name: :User
+    primary_key: :id
 
-  belongs_to :company,
-    primary_key: :id,
-    foreign_key: :company_id,
-    class_name: :Company
+  belongs_to :company
 end

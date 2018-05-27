@@ -26,15 +26,15 @@ ActiveRecord::Schema.define(version: 20180527013357) do
     t.date "date"
     t.integer "home_score"
     t.integer "away_score"
-    t.string "home"
-    t.string "away"
+    t.integer "home_team_id"
+    t.integer "away_team_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
 
   create_table "teams", force: :cascade do |t|
     t.string "name"
-    t.string "company"
+    t.integer "company_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
@@ -42,9 +42,9 @@ ActiveRecord::Schema.define(version: 20180527013357) do
   create_table "users", force: :cascade do |t|
     t.string "name"
     t.string "email"
-    t.string "company"
+    t.integer "company_id"
     t.string "phone_number"
-    t.string "team"
+    t.integer "team_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
