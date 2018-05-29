@@ -22,8 +22,8 @@
   </div>
 
   <div class="field">
-    <%= form.label :company %>
-    <%= form.text_field :company, id: :user_company %>
+    <%= form.label :company_id %>
+    <%= form.select :company_id, options_from_collection_for_select(@companies, :id, :name) %>
   </div>
 
   <div class="field">
@@ -32,8 +32,8 @@
   </div>
 
   <div class="field">
-    <%= form.label :team %>
-    <%= form.text_field :team, id: :user_team %>
+    <%= form.label :team_id %>
+    <%= form.select :team_id, options_from_collection_for_select(@teams, :id, :name) %>
   </div>
 
   <div class="actions">

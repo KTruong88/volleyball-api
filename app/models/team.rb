@@ -1,9 +1,7 @@
 class Team < ApplicationRecord
-  has_many :matches,
-    primary_key: :id
+  has_many :matches
 
-  has_many :users,
-    primary_key: :id
+  has_many :users
 
   belongs_to :company
 end

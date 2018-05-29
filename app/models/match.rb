@@ -1,5 +1,4 @@
 class Match < ApplicationRecord
-  has_many :teams,
-    primary_key: :id
+  has_many :teams
 
 end
