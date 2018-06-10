@@ -12,7 +12,7 @@
 
 <p>
   <strong>Company:</strong>
-  <%= @user.company %>
+  <%= @user.company.name %>
 </p>
 
 <p>
@@ -22,7 +22,7 @@
 
 <p>
   <strong>Team:</strong>
-  <%= @user.team %>
+  <%= @user.team.name %>
 </p>
 
 <%= link_to 'Edit', edit_user_path(@user) %> |
