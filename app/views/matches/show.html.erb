@@ -22,12 +22,12 @@
 
 <p>
   <strong>Home:</strong>
-  <%= @teams.find_index(@match.home_team_id).name %>
+  <%= @match.home_team.name %>
 </p>
 
 <p>
   <strong>Away:</strong>
-  <%= @teams.find_index(@match.away_team_id).name %>
+  <%= @match.away_team.name %>
 </p>
 
 <%= link_to 'Edit', edit_match_path(@match) %> |
