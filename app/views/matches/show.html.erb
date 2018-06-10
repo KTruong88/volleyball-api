@@ -27,7 +27,7 @@
 
 <p>
   <strong>Away:</strong>
-  <%= @teams.find(@match.home_team_id).name %>
+  <%= @teams.find(@match.away_team_id).name %>
 </p>
 
 <%= link_to 'Edit', edit_match_path(@match) %> |
