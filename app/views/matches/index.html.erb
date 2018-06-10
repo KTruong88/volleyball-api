@@ -22,8 +22,8 @@
         <td><%= match.date %></td>
         <td><%= match.home_score %></td>
         <td><%= match.away_score %></td>
-        <td><%= match.home %></td>
-        <td><%= match.away %></td>
+        <td><%= match.home_team_id %></td>
+        <td><%= match.away_team_id %></td>
         <td><%= link_to 'Show', match %></td>
         <td><%= link_to 'Edit', edit_match_path(match) %></td>
         <td><%= link_to 'Destroy', match, method: :delete, data: { confirm: 'Are you sure?' } %></td>
