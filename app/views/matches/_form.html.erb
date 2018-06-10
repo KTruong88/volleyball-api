@@ -32,13 +32,13 @@
   </div>
 
   <div class="field">
-    <%= form.label :team_id %>
-    <%= form.select :team_id, options_from_collection_for_select(@teams, :id, :name) %>
+    <%= form.label :home_team_id %>
+    <%= form.select :home_team_id, options_from_collection_for_select(@teams, :id, :name) %>
   </div>
 
   <div class="field">
-    <%= form.label :team_id %>
-    <%= form.select :team_id, options_from_collection_for_select(@teams, :id, :name) %>
+    <%= form.label :away_team_id %>
+    <%= form.select :away_team_id, options_from_collection_for_select(@teams, :id, :name) %>
   </div>
 
   <div class="actions">
