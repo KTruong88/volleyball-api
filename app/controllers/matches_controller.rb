@@ -4,7 +4,7 @@ class MatchesController < ApplicationController
   # GET /matches
   # GET /matches.json
   def index
-    @matches = Match.joins(:teams)
+    @matches = Match.joins(Team.all)
     render json: {matches: @matches}
   end
 
