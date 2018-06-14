@@ -4,7 +4,9 @@ class MatchesController < ApplicationController
   # GET /matches
   # GET /matches.json
   def index
-    @matches = Match.joins(Team.all)
+    @matches = Match.joins('
+    INNER JOIN teams AS t1 ON matches.home_team_id=t1.id
+    INNER JOIN teams AS t2 ON matches.away_team_id=t2.id')
     render json: {matches: @matches}
   end
 
