@@ -7,8 +7,8 @@ class MatchesController < ApplicationController
     matches_sql = '
     SELECT *, home_team.name AS home_team, away_team.name AS away_team
     FROM Matches as m
-    INNER JOIN teams AS home_team ON m.home_team_id=home_team.id
-    INNER JOIN teams AS away_team ON m.away_team_id=away_team.id'
+    INNER JOIN teams AS home_team ON home_team.id=m.home_team_id
+    INNER JOIN teams AS away_team ON away_team.id=m.away_team_id'
 
     @matches = Match.find_by_sql(matches_sql)
     render json: {matches: @matches}
