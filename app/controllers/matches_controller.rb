@@ -4,9 +4,13 @@ class MatchesController < ApplicationController
   # GET /matches
   # GET /matches.json
   def index
-    @matches = Match.joins('
-    INNER JOIN teams AS t1 ON matches.home_team_id=t1.id
-    INNER JOIN teams AS t2 ON matches.away_team_id=t2.id')
+    matches_sql = '
+    SELECT *, home_team.name, away_team.name
+    FROM Matches
+    INNER JOIN teams AS home_team ON matches.home_team_id=home_team.id
+    INNER JOIN teams AS away_team ON matches.away_team_id=away_team.id'
+
+    @matches = ActiveRecord::Base.connection.execute(matches_sql)
     render json: {matches: @matches}
   end
 
