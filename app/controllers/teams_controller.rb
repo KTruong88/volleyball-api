@@ -15,7 +15,7 @@ class TeamsController < ApplicationController
   # GET /teams/new
   def new
     @team = Team.new
-    @company = Company.all
+    @companies = Company.all
   end
 
   # GET /teams/1/edit
