@@ -27,9 +27,7 @@ class TeamsController < ApplicationController
   # POST /teams.json
   def create
     company = Company.find_by(name: params[:team][:company])
-    p company
-    # @team = company.teams.build(team_params)
-    @team = Team.new(team_params)
+    @team = company.teams.build(team_params)
 
     respond_to do |format|
       if @team.save
