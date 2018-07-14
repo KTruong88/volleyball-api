@@ -35,7 +35,6 @@ class MatchesController < ApplicationController
   # POST /matches.json
   def create
     @match = Match.new(match_params)
-    @teams = Team.all
 
     respond_to do |format|
       if @match.save
@@ -51,7 +50,8 @@ class MatchesController < ApplicationController
   # PATCH/PUT /matches/1
   # PATCH/PUT /matches/1.json
   def update
-    puts '*************THIS ROUTE WAS HIT*************'
+    @teams = Team.all
+
     respond_to do |format|
       if @match.update(match_params)
         format.html { render :show, notice: 'Match was successfully updated.' }
