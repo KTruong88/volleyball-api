@@ -35,6 +35,7 @@ class MatchesController < ApplicationController
   # POST /matches.json
   def create
     @match = Match.new(match_params)
+    @teams = Team.all
 
     respond_to do |format|
       if @match.save
