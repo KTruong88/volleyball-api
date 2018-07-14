@@ -53,8 +53,7 @@ class MatchesController < ApplicationController
     puts '*************THIS ROUTE WAS HIT*************'
     respond_to do |format|
       if @match.update(match_params)
-        flash[:notice] = "Match was successfully updated."
-        #format.html { redirect_to @match, notice: 'Match was successfully updated.' }
+        format.html { render :show, notice: 'Match was successfully updated.' }
         format.json { render :show, status: :ok, location: @match }
       else
         format.html { render :edit }
