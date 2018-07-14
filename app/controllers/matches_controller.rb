@@ -50,6 +50,7 @@ class MatchesController < ApplicationController
   # PATCH/PUT /matches/1
   # PATCH/PUT /matches/1.json
   def update
+    puts '*************THIS ROUTE WAS HIT*************'
     respond_to do |format|
       if @match.update(match_params)
         format.html { redirect_to @match, notice: 'Match was successfully updated.' }
