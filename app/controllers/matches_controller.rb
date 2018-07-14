@@ -55,7 +55,7 @@ class MatchesController < ApplicationController
       if @match.update(match_params)
         flash[:notice] = "Match was successfully updated."
         #format.html { redirect_to @match, notice: 'Match was successfully updated.' }
-        #format.json { render :show, status: :ok, location: @match }
+        format.json { render :show, status: :ok, location: @match }
       else
         format.html { render :edit }
         format.json { render json: @match.errors, status: :unprocessable_entity }
