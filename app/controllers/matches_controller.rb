@@ -54,6 +54,7 @@ class MatchesController < ApplicationController
 
     respond_to do |format|
       if @match.update(match_params)
+        flash.now[:notice] = 'Match was successfully updated'
         format.html { render :show, notice: 'Match was successfully updated.' }
         format.json { render :show, status: :ok, location: @match }
       else
